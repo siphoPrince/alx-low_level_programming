@@ -8,8 +8,8 @@ int main(void)
 	char c;
 	char d;
 
-	c = 'a';
-	d = 'd';
+	c = 'A';
+	d = 'D';
 	while
 		(c <= 'z')
 {
@@ -17,7 +17,7 @@ int main(void)
 	c++;
 }
 	while
-		(d <= 'a')
+		(d <= 'z')
 {
 			putchar(c);
 			d++;
