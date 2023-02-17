@@ -1,15 +1,16 @@
 #include<stdio.h>
 /**
  * main-  prints the alphabet in lowercase
- * Return: Always 0 (Succes)
+ * Return: 0
  */
+
 int main(void)
 {
 	char c;
 	char d;
 
-	c = 'A';
-	d = 'D';
+	c = 'a';
+	d = 'A';
 	while
 		(c <= 'z')
 {
@@ -17,7 +18,7 @@ int main(void)
 	c++;
 }
 	while
-		(d <= 'z')
+		(d <= 'Z')
 {
 			putchar(d);
 			d++;
