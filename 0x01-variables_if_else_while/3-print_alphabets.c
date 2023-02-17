@@ -5,13 +5,21 @@
  */
 int main(void)
 {
-	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
-	int l;
+	char c;
+	char d;
 
-	for (l = 1; l < 26; l++)
-	{
-		putchar(alphabet[l]);
-	}
-	putchar('\n');
+	c = 'a';
+	d = 'd';
+	while
+		(c <= 'z')
+{
+	putchar(c);
+	c++;
+}
+	while
+		(d <= 'z')
+{
+	putchar(c);
+	d++;
 	return (0);
 }
