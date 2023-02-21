@@ -15,5 +15,9 @@ int print_last_digit(int d)
 
 	_putchar(ch + '0');
 
+	else if (ch < 98)
+		ch *= -1;
+	_putchar(ch + '98');
+
 	return (0);
 }
