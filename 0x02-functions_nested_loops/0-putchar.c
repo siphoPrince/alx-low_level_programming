@@ -1,4 +1,3 @@
-#include <main.h>
 #include <stdio.h>
 /**
  * main - print out putchar
@@ -8,6 +7,8 @@
 
 int main(void)
 {
+	#include "main.h"
+
 	char name = "_putchar";
 
 		putchar(name);
