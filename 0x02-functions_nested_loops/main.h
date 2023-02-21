@@ -1,1 +1,4 @@
-main.h
+#define main.h
+
+int putchar(char);
+void print_alphabet(void);
