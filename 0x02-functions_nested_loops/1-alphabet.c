@@ -1,17 +1,18 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - Write a function that prints the alphabet
  * Return: 0
 */
 
-int main(void)
+void print_alphabet(void)
 {
 	char ch;
 
-	for (ch = "a"; ch <= "z" ; ch++)
-	{
+	for (ch = 'a'; ch <= 'z' ; ch++)
+	
 		putchar(ch);
-	}
+		putchar('\n')
 
 	return (0);
 }
