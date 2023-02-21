@@ -1,4 +1,4 @@
-#include "main.h"i
+#include "main.h"
 
 /**
  * jack_bauer - prints every minutes of the day
@@ -20,4 +20,5 @@ void jack_bauer(void)
 			_putchar((minute % 10) + '0');
 			_putchar('\n');
 		}
+	}
 }
