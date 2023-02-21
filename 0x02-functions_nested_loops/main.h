@@ -1,4 +1,4 @@
-#define main.h
+#include "main.h"
 
-int putchar(char);
+char prints(char);
 void print_alphabet(void);
