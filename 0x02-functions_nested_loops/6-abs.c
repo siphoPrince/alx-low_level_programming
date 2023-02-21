@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include "main.h"
 
-int _abs(int)
+int _abs(int ch )
 {
-	if (t >= 0)
-		return (t);
+	if (ch >= 0)
+		return (ch);
 	else
-		return (-t);
+		return (-ch);
 }	
