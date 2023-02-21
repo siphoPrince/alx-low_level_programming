@@ -3,7 +3,7 @@
 
 /**
  * print_to_98 - print all from input
- * @n - num
+ * @n: num
  */
 
 void print_to_98(int n)
