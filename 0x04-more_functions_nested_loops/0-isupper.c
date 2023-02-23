@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctyp.h>
 /**
  * _isupper - changing the upper case
  * Return: if is upper return 1 if its not return 0
