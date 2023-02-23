@@ -6,9 +6,8 @@
 
 int _isupper(int c)
 {
-	if (isupper('c'))
-		_putchar(c);
-	return (1);
+	if (c <= 'c' && c >= 'z')
+		return (1);
 	else
-		return (0);
+		return(0);
 }
