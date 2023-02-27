@@ -1,5 +1,5 @@
 #include "main.h"
-#include "_putchar.c"
+
 /**
  * puts2 - function should print only one character out of two
  * starting with the first one
