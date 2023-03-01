@@ -9,36 +9,24 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char string[20];
-	char string1[20];
-	int i = 0;
-	int j = 0;
 
-	dest = string;
-	src = string1;
+	int o = 0;
+	int p = 0;
 
-	_putchar("Enter the first string value\n");
 
-	gets("%s", string);
-
-	_putchar("enter the second string of value\n");
-
-	gets("%s", string1);
-
-	while (string[i] != '\0')
+	while (dest[o] != '\0')
 	{
 		++dest;
 		i++;
 	}
-	while (string1[j] != '\0')
+	while (src[p] != '\0')
 	{
-		*dest = *src;
+		*dest[o] = *src[p];
 		dest++;
 		src++;
 		j++;
 	}
 
-	_putchar("the concatenated string is %s", string);
-
-	return (0);
+	dest[o] = '\0';
+	return (dest);
 
