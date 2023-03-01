@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <string.h>
 /**
  * *_strcat - Write a function of two strings
  * @dest : destination for first string
@@ -7,25 +7,9 @@
  * Return: A pointer to the resulting string dest
 */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src, int m)
 {
 
-	int o = 0;
-	int p = 0;
-
-
-	while (dest[o] != '\0')
-	{
-		
-		o++;
-	}
-	while (src[p] != '\0')
-	{
-		dest[o] = src[p];
-		o++
-		p++;
-	}
-
-	dest[o] = '\0';
+	strncat(dest, src, m);
 	return (dest);
-
+}
