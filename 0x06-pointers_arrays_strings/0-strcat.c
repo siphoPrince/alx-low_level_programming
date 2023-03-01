@@ -2,35 +2,35 @@
 #include <stdio.h>
 /**
  * _strcat : Write a function that concatenates two strings
- * @*dest: destination for first string
- * @*src: destination for second string
+ * @dest : destination for first string
+ * @src : destination for second string
  * Return: A pointer to the resulting string dest
 */
 
 char *_strcat(char *dest, char *src)
 {
-	char string [20];
-	char string1 [20];
+	char string[20];
+	char string1[20];
 	int i = 0;
 	int j = 0;
 
 	dest = string;
 	src = string1;
 
-	printf("Enter the first string value\n");
+	_putchar("Enter the first string value\n");
 
-	scanf("%s", string);
+	gets("%s", string);
 
-	printf("enter the second string of value\n");
+	_putchar("enter the second string of value\n");
 
-	scanf("%s", string1);
+	gets("%s", string1);
 
-	while(string[i] != '\0')
+	while (string[i] != '\0')
 	{
 		++dest;
 		i++;
 	}
-	while(string1 [j] != '\0')
+	while (string1[j] != '\0')
 	{
 		*dest = *src;
 		dest++;
@@ -38,7 +38,7 @@ char *_strcat(char *dest, char *src)
 		j++;
 	}
 
-	printf("the concatenated string is %s", string);
+	_putchar("the concatenated string is %s", string);
 
 	return (0);
 
