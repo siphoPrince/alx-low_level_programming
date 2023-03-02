@@ -22,7 +22,7 @@ char *leet(char *str)
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (str[b] == small_letter[i] || s[b] == big_letter[i])
+			if (str[b] == small_letter[i] || str[b] == big_letter[i])
 			{
 				str[b] = numbers[i];
 				break;
