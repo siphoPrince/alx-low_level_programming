@@ -20,10 +20,7 @@ char *cap_string(char *str)
 		{
 		if (isspace(str[i - 1])
 			
-			|| str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' ||
-			str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"'
-			|| str[i - 1] == '(' ||
-			str[i - 1] == ')' || str[i - 1] == '{' || str[i - 1] == '}')
+		|| str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' || str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"' 				|| str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' || str[i - 1] == '}')
 			}
 				if (islower(str[i]))
 				{
