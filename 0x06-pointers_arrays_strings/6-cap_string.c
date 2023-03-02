@@ -16,17 +16,17 @@ char *cap_string(char *str)
 	{
 	str[0] = toupper(str[0]);
 	}
-		for (i = 1; i < len; i++)
-		{
-		if (isspace(str[i - 1])
-			
-		|| str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' || str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"' 				|| str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' || str[i - 1] == '}')
-			}
-				if (islower(str[i]))
-				{
-				str[i] = toupper(str[i]);
-			}
-		}
+	for (i = 1; i < len; i++)
+	{
+	if (isspace(str[i-1])
+	|| str[i-1] == ',' || str[i-1] == ';' || str[i-1] == '.' || 
+	str[i-1] == '!' || str[i-1] == '?' || str[i-1] == '"' || str[i-1] == '(' || 
+	str[i-1] == ')' || str[i-1] == '{' || str[i-1] == '}')
+	{
+	if (islower(str[i]))
+	{
+	str[i] = toupper(str[i]);
+	}
 
 	return (str);
 }
