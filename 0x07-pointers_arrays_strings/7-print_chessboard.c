@@ -5,6 +5,7 @@
 /**
  * print_chessboard - main function
  * @a: parr used
+ * Return: 0
  */
 
 void print_chessboard(char (*a)[8])
