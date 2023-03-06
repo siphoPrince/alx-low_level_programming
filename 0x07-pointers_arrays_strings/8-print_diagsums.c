@@ -7,20 +7,21 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int sum1 = 0;
-	int sum2 = 0;
-	int i = 0;
-	int j = 0;
+	int index, sum1 = 0, sum2 = 0;
 
-	while (i < size)
+	for (index = 0; index < size; index++)
 	{
-		sum1 += *(a + i * size + j);
-		sum2 += *(a + i * size + size - 1 - j);
-		i++;
-		j++;
+		sum1 += a[index];
+		a += size;
 	}
 
-	printf("Sum of the main diagonal = %d\n", sum1);
-	printf("Sum of the secondary diagonal = %d\n", sum2);
-}
+	a -= size;
 
+	for (index = 0; index < size; index++)
+	{
+		sum2 += a[index];
+		a -= size;
+	}
+
+	printf("%d, %d\n", sum1, sum2);
+}
