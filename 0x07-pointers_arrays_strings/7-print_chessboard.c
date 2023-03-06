@@ -16,10 +16,10 @@ void print_chessboard(char (*a)[8])
 	j = 0;
 	while (j < 8)
 	{
-	putchar("%c ", a[i][j]);
+	printf("%c ", a[i][j]);
 	j++;
 	}
-	putchar("\n");
+	printf("\n");
 	i++;
 	}
 }
