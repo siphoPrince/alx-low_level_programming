@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _memse - the main function
+ * _memset - the main function
  * @s: first parr
  * @b:second par
  * @n:int parr
