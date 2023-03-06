@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include "_putchar.c"
 
 /**
  * print_chessboard - main function
@@ -15,10 +16,10 @@ void print_chessboard(char (*a)[8])
 	j = 0;
 	while (j < 8)
 	{
-	printf("%c ", a[i][j]);
+	putchar("%c ", a[i][j]);
 	j++;
 	}
-	printf("\n");
+	putchar("\n");
 	i++;
 	}
 }
