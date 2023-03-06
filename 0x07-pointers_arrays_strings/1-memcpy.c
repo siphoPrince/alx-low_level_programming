@@ -10,7 +10,7 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	char *dn = dest;
-	char *s = src
+	char *s = src;
 
 	while (n--)
 	{
