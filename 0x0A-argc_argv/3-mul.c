@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	}
 
 	sum1 = atoi(argv[1]);
-	sum2 =atoi(argv[2]);
+	sum2 = atoi(argv[2]);
 	result = sum1 * sum2;
 
 
