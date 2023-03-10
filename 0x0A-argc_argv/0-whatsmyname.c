@@ -9,9 +9,9 @@
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	printf("argc: %d\n", argc);
 
-	printf("argv[0] = %s", argv[0]);
+
+	printf("%s", argv[0]);
 
 	return (0);
 }
