@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-	printf("Error: Please enter two integer arguments\n");
+	printf("Error\n");
 	return (1);
 	}
 
-	printf("The product of %d and %d is %d\n", sum1, sum2, result);
+	printf("%d\n", result);
 	return (0);
 }
 
