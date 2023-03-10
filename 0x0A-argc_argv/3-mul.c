@@ -6,21 +6,22 @@
  * @argc: first parr
  * @argv: second parr
  * Return: 0
- */
+*/
 
 int main(int argc, char *argv[])
 {
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[2]);
-	int result = num1 * num2;
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+	printf("Error: Please enter two integer arguments\n");
 	return (1);
 	}
 
-	printf("%d\n", result);
+	int sum1 = atoi(argv[1]);
+	int sum2 = atoi(argv[2]);
+	int result = sum1 * sum2;
 
+	printf("The product of %d and %d is %d\n", sum1, sum2, result);
 	return (0);
 }
+
