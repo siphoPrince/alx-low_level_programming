@@ -2,16 +2,15 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _strdup - duplicate to new memory space location
- * @str: char
+ * _strdup - duplicate to new memory string
+ * @str: main char
  * Return: 0
  */
 
 char *_strdup(char *str)
-
 {
 
-	char *aaa;
+	char *arr;
 
 	int i, r = 0;
 
@@ -24,16 +23,16 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 		i++;
 
-	aaa = malloc(sizeof(char) * (i + 1));
+	arr = malloc(sizeof(char) * (i + 1));
 
-	if (aaa == NULL)
+	if (arr == NULL)
 
 		return (NULL);
 
 	for (r = 0; str[r]; r++)
 
-		aaa[r] = str[r];
+		arr[r] = str[r];
 
-	return (aaa);
+	return (arr);
 
 }
