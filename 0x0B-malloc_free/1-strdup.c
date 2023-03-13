@@ -9,18 +9,31 @@
 
 char *_strdup(char *str)
 {
-	char *copy = (char *) malloc((strlen(str) + 1) * sizeof(char));
-	
+	char *arr;
+
+	int i, r = 0;
+
 	if (str == NULL)
 	{
+
 		return (NULL);
 
+		i = 0;
 	}
-	
-	if (copy == NULL)
+	while (str[i] != '\0')
+
+		i++;
+
+	arr = malloc(sizeof(char) * (i + 1));
+
+	if (arr == NULL)
 	{
 		return (NULL);
 	}
+	for (r = 0; str[r]; r++)
+	{
+		arr[r] = str[r];
+	}
 
-	return (copy);
+	return (arr);
 }
