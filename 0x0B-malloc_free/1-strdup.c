@@ -17,14 +17,10 @@ char *_strdup(char *str)
 
 	}
 	
-	size_t len = strlen(str) + 1
-
 	if (copy == NULL)
 	{
 		return (NULL);
 	}
-
-	memcpy(copy, str, len);
 
 	return (copy);
 }
