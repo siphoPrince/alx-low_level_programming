@@ -1,53 +1,70 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 
-#define BUFSIZE 1024
+char *read_file(char *file);
 
 /**
- * main - entry point function
- * @argc: argument count
- * @argv: argument vector
+ * read_file - Reads the contents of a file and returns a pointer to a buffer.
+ * @file: The name of the file to read.
  *
- * Return: 0 on success, otherwise exit with code 97, 98, 99 or 100
+ * Return: A pointer to the buffer containing the file contents.
  */
-int main(int argc, char **argv)
+char *read_file(char *file)
 {
-	int from_fd, to_fd, read_bytes;
-	char buf[BUFSIZE];
-	ssize_t bytes_written;
+    char *buffer;
+    long length;
+    FILE *f;
 
-	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+    f = fopen(file, "rb");
 
-	from_fd = open(argv[1], O_RDONLY);
-	if (from_fd == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-				argv[1]), exit(98);
+    if (f == NULL)
+    {
+        fprintf(stderr, "Error: Could not open file %s\n", file);
+        exit(1);
+    }
 
-	to_fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (to_fd == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+    fseek(f, 0, SEEK_END);
+    length = ftell(f);
+    fseek(f, 0, SEEK_SET);
+    buffer = malloc(length);
 
-	do {
-		read_bytes = read(from_fd, buf, BUFSIZE);
-		if (read_bytes == -1)
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-					argv[1]), exit(98);
+    if (buffer == NULL)
+    {
+        fprintf(stderr, "Error: Could not allocate memory for buffer\n");
+        fclose(f);
+        exit(1);
+    }
 
-		bytes_written = write(to_fd, buf, read_bytes);
-		if (bytes_written == -1 || bytes_written != read_bytes)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+    fread(buffer, 1, length, f);
+    fclose(f);
 
-	} while (read_bytes == BUFSIZE);
+    return buffer;
+}
 
-	if (close(from_fd) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_fd), exit(100);
+/**
+ * main - Reads a file and outputs its contents to the console.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: 0 on success.
+ *
+ * Description: If the argument count is incorrect - exit code 1.
+ *              If the file cannot be read - exit code 1.
+ */
+int main(int argc, char *argv[])
+{
+    char *buffer;
 
-	if (close(to_fd) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_fd), exit(100);
+    if (argc != 2)
+    {
+        fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
+        exit(1);
+    }
 
-	return (0);
+    buffer = read_file(argv[1]);
+    printf("%s", buffer);
+    free(buffer);
+
+    return 0;
 }
 
