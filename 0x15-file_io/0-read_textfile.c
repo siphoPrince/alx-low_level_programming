@@ -1,7 +1,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
-
 /**
  * read_textfile - main function used for text file and print to stdout
  * @filename: the name of the file to read
