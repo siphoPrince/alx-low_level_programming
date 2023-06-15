@@ -6,6 +6,7 @@
  * @h: used for double pointer
  * @idx: index
  * @n: used to store values
+ * Return: new mode
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
