@@ -3,29 +3,30 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *  hash_table_delete - Delete a table
- *
- *  @ht: The hash table pointer
- *
- *  Return: Void or null
+ * hash_table_delete - Deletes a hash table.
+ * @ht: A pointer to a hash table.
  */
-
 void hash_table_delete(hash_table_t *ht)
 {
+	hash_table_t *head = ht;
+	hash_node_t *node, *tmp;
 	unsigned long int i;
-	hash_node_t *temp = NULL;
 
 	for (i = 0; i < ht->size; i++)
 	{
-		while (ht->array[i])
+		if (ht->array[i] != NULL)
 		{
-			temp = ht->array[i]->next;
-			free(ht->array[i]->value);
-			free(ht->array[i]->key);
-			free(ht->array[i]);
-			ht->array[i] = temp;
+			node = ht->array[i];
+			while (node != NULL)
+			{
+				tmp = node->next;
+				free(node->key);
+				free(node->value);
+				free(node);
+				node = tmp;
+			}
 		}
 	}
-	free(ht->array);
-	free(ht);
+	free(head->array);
+	free(head);
 }
