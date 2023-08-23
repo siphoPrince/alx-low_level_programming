@@ -1,0 +1,21 @@
+EXECUTABLE = school
+
+SOURCES = main.c school.c
+
+OBJECTS = $(SOURCES:.c=.o)
+
+CC = gcc
+
+CFLAGS = -Wall
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(EXECUTABLE)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(EXECUTABLE) $(OBJECTS)
+
