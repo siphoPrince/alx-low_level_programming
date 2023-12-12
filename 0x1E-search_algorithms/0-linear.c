@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "search_algos.h"
 
 /**
  * linear_search - Search for a value in an array using Linear search algorithm
@@ -7,7 +8,6 @@
  * @value: The value to search for
  *
  * Return: The first index where the value is located,
- *         or -1 if the value is not present in the array or if the array is NULL
  */
 int linear_search(int *array, size_t size, int value)
 {
