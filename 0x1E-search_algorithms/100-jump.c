@@ -2,12 +2,12 @@
 #include <math.h>
 
 /**
- * jump_search - Searches for a value in a sorted array using Jump search algorithm
+ * jump_search - Searches for a value in a sorted array
  * @array: Pointer to the first element of the array to search in
  * @size: Number of elements in the array
  * @value: Value to search for
  *
- * Return: The first index where the value is located, or -1 if not found or array is NULL
+ * Return: The first index where the value is located
  */
 int jump_search(int *array, size_t size, int value)
 {
@@ -37,7 +37,7 @@ int jump_search(int *array, size_t size, int value)
 	{
 		printf("Value checked array[%d] = [%d]\n", index, array[index]);
 
-	if (array[index] == value)
+		if (array[index] == value)
 		{
 			return (index);
 		}
